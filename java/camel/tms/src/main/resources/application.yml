@@ -1,0 +1,22 @@
+camel:
+  springboot:
+    # The Camel context name
+    name: CamelRestJpa
+
+  component:
+    servlet:
+      mapping:
+        contextPath: /camel-rest-jpa/*
+
+spring:
+  # Spring Data JPA configuration
+  jpa:
+    hibernate:
+      # To be updated in real production usage!
+      ddl-auto: create-drop
+    show-sql: true
+
+# The application configuration properties
+example:
+  generateOrderPeriod: 10s
+  processOrderPeriod: 30s
