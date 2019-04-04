@@ -1,6 +1,6 @@
 package lt.asprogramuoju.jersey.controller;
 
-import lt.asprogramuoju.jersey.bean.Person;
+import lt.asprogramuoju.jersey.domain.Person;
 import lt.asprogramuoju.jersey.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

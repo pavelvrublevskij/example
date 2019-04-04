@@ -15,6 +15,13 @@ spring:
     driverClassName: org.h2.Driver
     url: jdbc:h2:mem:cs;MODE=PostgreSQL
 
+  # Spring Data JPA configuration
+  jpa:
+    hibernate:
+    # To be updated in real production usage!
+      ddl-auto: create-drop
+    show-sql: true
+
 logging:
   level:
     org:

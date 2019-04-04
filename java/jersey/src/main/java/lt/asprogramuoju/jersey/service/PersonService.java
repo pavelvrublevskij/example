@@ -1,6 +1,6 @@
 package lt.asprogramuoju.jersey.service;
 
-import lt.asprogramuoju.jersey.bean.Person;
+import lt.asprogramuoju.jersey.domain.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

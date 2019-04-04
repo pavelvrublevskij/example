@@ -1,6 +1,6 @@
 package lt.asprogramuoju.jersey.service;
 
-import lt.asprogramuoju.jersey.bean.Person;
+import lt.asprogramuoju.jersey.domain.Person;
 
 import java.util.List;
 

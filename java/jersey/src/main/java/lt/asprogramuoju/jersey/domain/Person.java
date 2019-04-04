@@ -1,4 +1,4 @@
-package lt.asprogramuoju.jersey.bean;
+package lt.asprogramuoju.jersey.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
