@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'maven'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+ext {
+    springBootStarterVersion = '1.5.4.RELEASE'
+    camelVersion = '2.19.1'
+}
+
+dependencies {
+    compile "org.apache.camel:camel-servlet-starter:$project.camelVersion"
+    compile "org.apache.camel:camel-jackson-starter:$project.camelVersion"
+    compile "org.apache.camel:camel-swagger-java-starter:$project.camelVersion"
+    compile "org.apache.camel:camel-spring-boot-starter:$project.camelVersion"
+    compile "org.apache.camel:camel-jpa-starter:$project.camelVersion"
+
+    compile "org.webjars:swagger-ui:3.1.4"
+    compile "org.webjars:webjars-locator:0.32-1"
+
+    compile "org.springframework.boot:spring-boot-starter-web:$project.springBootStarterVersion"
+    compile "org.springframework.boot:spring-boot-starter-data-jpa:$project.springBootStarterVersion"
+
+    compile 'com.h2database:h2:1.4.197'
+
+    testCompile "org.springframework.boot:spring-boot-starter-test:$project.springBootStarterVersion"
+}
+
+group = 'lt.asprogramuoju.example.camel'
+version = '0.0.1-SNAPSHOT'
+description = 'Taks Mangement System (example)'
+sourceCompatibility = '1.8'

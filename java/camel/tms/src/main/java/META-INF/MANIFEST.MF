@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Class-Path: spring-boot-starter-jdbc-1.5.4.RELEASE.jar spring-beans-4.
+ 3.9.RELEASE.jar spring-core-4.3.9.RELEASE.jar jackson-annotations-2.8
+ .8.jar spring-boot-starter-1.5.4.RELEASE.jar commons-lang3-3.5.jar sp
+ ring-aspects-4.3.9.RELEASE.jar tomcat-embed-el-8.5.15.jar javassist-3
+ .18.2-GA.jar hibernate-core-5.0.12.Final.jar aspectjweaver-1.8.10.jar
+  tomcat-juli-8.5.15.jar camel-swagger-java-2.19.1.jar spring-webmvc-4
+ .3.9.RELEASE.jar stax2-api-3.1.4.jar swagger-core-1.5.13.jar hibernat
+ e-entitymanager-5.0.12.Final.jar jul-to-slf4j-1.7.25.jar camel-jackso
+ n-starter-2.19.1.jar camel-core-starter-2.19.1.jar spring-boot-starte
+ r-web-1.5.4.RELEASE.jar slf4j-ext-1.6.3.jar jackson-module-jaxb-annot
+ ations-2.8.8.jar validation-api-1.1.0.Final.jar jackson-datatype-joda
+ -2.8.8.jar camel-jackson-2.19.1.jar jackson-databind-2.8.8.jar spring
+ -boot-starter-aop-1.5.4.RELEASE.jar tomcat-embed-websocket-8.5.15.jar
+  jackson-jaxrs-json-provider-2.8.8.jar javax.transaction-api-1.2.jar 
+ spring-boot-1.5.4.RELEASE.jar swagger-parser-1.0.28.jar spring-boot-a
+ utoconfigure-1.5.4.RELEASE.jar geronimo-jpa_2.0_spec-1.1.jar camel-se
+ rvlet-2.19.1.jar jaxb-impl-2.2.11.jar xml-apis-1.0.b2.jar spring-boot
+ -starter-tomcat-1.5.4.RELEASE.jar jackson-dataformat-xml-2.8.8.jar jb
+ oss-logging-3.3.0.Final.jar tomcat-jdbc-8.5.15.jar jandex-2.0.0.Final
+ .jar tomcat-embed-core-8.5.15.jar swagger-annotations-1.5.13.jar spri
+ ng-data-commons-1.13.4.RELEASE.jar jsr311-api-1.1.1.jar camel-jpa-2.1
+ 9.1.jar jackson-core-2.8.8.jar jackson-jaxrs-base-2.8.8.jar dom4j-1.6
+ .1.jar snakeyaml-1.17.jar hibernate-validator-5.3.5.Final.jar commons
+ -io-2.4.jar spring-context-4.3.9.RELEASE.jar log4j-over-slf4j-1.7.25.
+ jar spring-expression-4.3.9.RELEASE.jar camel-spring-boot-starter-2.1
+ 9.1.jar jackson-dataformat-yaml-2.8.8.jar camel-spring-boot-2.19.1.ja
+ r reflections-0.9.10.jar swagger-models-1.5.13.jar guava-20.0.jar cam
+ el-jpa-starter-2.19.1.jar hibernate-jpa-2.1-api-1.0.0.Final.jar sprin
+ g-aop-4.3.9.RELEASE.jar logback-classic-1.1.11.jar antlr-2.7.7.jar ca
+ mel-servlet-starter-2.19.1.jar spring-boot-starter-data-jpa-1.5.4.REL
+ EASE.jar jaxb-core-2.2.11.jar jcl-over-slf4j-1.7.25.jar joda-time-2.7
+ .jar camel-http-common-2.19.1.jar spring-jdbc-4.3.9.RELEASE.jar sprin
+ g-boot-starter-logging-1.5.4.RELEASE.jar camel-core-2.19.1.jar h2-1.4
+ .197.jar spring-data-jpa-1.11.4.RELEASE.jar commons-logging-1.2.jar l
+ ogback-core-1.1.11.jar annotations-2.0.1.jar hibernate-commons-annota
+ tions-5.0.1.Final.jar spring-tx-4.3.9.RELEASE.jar woodstox-core-5.0.3
+ .jar camel-swagger-java-starter-2.19.1.jar caffeine-2.3.5.jar spring-
+ orm-4.3.9.RELEASE.jar swagger-jaxrs-1.5.13.jar camel-spring-2.19.1.ja
+ r javax.servlet-api-3.1.0.jar spring-web-4.3.9.RELEASE.jar classmate-
+ 1.3.1.jar slf4j-api-1.7.25.jar cal10n-api-0.7.4.jar
+Main-Class: lt.asprogramuoju.example.camel.TmsApplication
+

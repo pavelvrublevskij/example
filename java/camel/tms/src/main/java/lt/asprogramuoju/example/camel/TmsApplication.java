@@ -1,44 +1,33 @@
 package lt.asprogramuoju.example.camel;
 
-import org.apache.camel.component.servlet.CamelHttpTransportServlet;
-import org.apache.camel.component.swagger.DefaultCamelSwaggerServlet;
+import lt.asprogramuoju.example.camel.repository.PersonRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.context.annotation.Bean;
-
-import java.util.HashMap;
-import java.util.Map;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages="lt.asprogramuoju.example.camel.*")
 public class TmsApplication {
 
-    private static final String CAMEL_URL_MAPPING = "/api/*";
-    private static final String CAMEL_SERVLET_NAME = "CamelServlet";
+	@Autowired
+	PersonRepository personRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(TmsApplication.class, args);
 	}
 
-    @Bean
-    public ServletRegistrationBean servletRegistrationBean() {
-        ServletRegistrationBean registration =
-                new ServletRegistrationBean(new CamelHttpTransportServlet(), CAMEL_URL_MAPPING);
-        registration.setName(CAMEL_SERVLET_NAME);
-        return registration;
-    }
-
-    @Bean
-    public ServletRegistrationBean swaggerServlet() {
-        ServletRegistrationBean swagger = new ServletRegistrationBean(new DefaultCamelSwaggerServlet(), "/api-doc/*");
-        Map<String, String> params = new HashMap<>();
-        params.put("base.path", "api");
-        params.put("api.title", "Task Management System");
-        params.put("api.description", "This is example of TMS");
-        params.put("api.termsOfServiceUrl", "termsOfServiceUrl");
-        params.put("api.license", "license");
-        params.put("api.licenseUrl", "licenseUrl");
-        swagger.setInitParameters(params);
-        return swagger;
-    }
+//	@Override
+//	public void run(String... args) throws Exception {
+//		logger.info("Person id 10001 -> {}", personRepository.findById(10001L));
+//		logger.info("All person 1 -> {}", personRepository.findAll());
+//
+//		//Insert
+//		logger.info("Inserting -> {}", personRepository.save(new Person("John", "Snow")));
+//
+//		//Update
+//		logger.info("Update 10001 -> {}", personRepository.save(new Person(10001L, "Firstname", "Lastname")));
+////		personRepository.deleteById(-2L);
+//		logger.info("All persons 2 -> {}", personRepository.findAll());
+//	}
 }
