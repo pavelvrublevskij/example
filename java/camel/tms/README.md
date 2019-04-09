@@ -2,8 +2,8 @@
 
 This repository contains a demo of Spring Boot with Apache Camel and Swagger UI.
 
-* Spring Boot 1.5.4.RELEASE
-* Apache Camel 2.19.1
+* Spring Boot 2.1.3.RELEASE
+* Apache Camel 3.0.0-SNAPSHOT
 * Swagger UI 3.1.4
 * H2 1.4.197
 
