@@ -22,5 +22,6 @@ Swagger document is available at
 Swagger UI is at
 Testing with petstore: http://localhost:8080/webjars/swagger-ui/index.html
 
+Project swagger documentation:
 - http://localhost:8080/webjars/swagger-ui/index.html?url=/camel/api-doc&validatorUrl=
-- http://localhost:8080/api-doc (redirect)
+- http://localhost:8080/ (redirect)
