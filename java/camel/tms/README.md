@@ -7,6 +7,10 @@ This repository contains a demo of Spring Boot with Apache Camel and Swagger UI.
 * Swagger UI 3.1.4
 * H2 1.4.197
 
+### Important
+This Example use lombok plugin. How to configure read: 
+https://github.com/mplushnikov/lombok-intellij-plugin
+
 
 ### H2
 - http://localhost:8080/h2

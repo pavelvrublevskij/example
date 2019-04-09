@@ -7,6 +7,6 @@ INSERT INTO person
 INSERT INTO task(id, title, description, priority)
   VALUES (0, 'Backlog', 'All new tasks came here.', 'Low');
 
-INSERT INTO person_has_task
-  VALUES (-2, 0),
-         (-1, 0);
+-- INSERT INTO person_has_task
+--   VALUES (-2, 0),
+--          (-1, 0);

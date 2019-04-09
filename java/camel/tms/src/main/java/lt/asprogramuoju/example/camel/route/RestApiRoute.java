@@ -1,13 +1,10 @@
 package lt.asprogramuoju.example.camel.route;
 
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.component.servlet.CamelHttpTransportServlet;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -15,20 +12,11 @@ public class RestApiRoute extends RouteBuilder {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Value("${tms.api.path}")
+    @Value("{server.context-path}") //"${tms.api.path}")
     String contextPath;
-
 
     @Value("${server.port}")
     String serverPort;
-
-    @Bean
-    ServletRegistrationBean servletRegistrationBean() {
-        ServletRegistrationBean servlet = new ServletRegistrationBean
-                (new CamelHttpTransportServlet(), contextPath+"/*");
-        servlet.setName("CamelServlet");
-        return servlet;
-    }
 
     @Override
     public void configure() {

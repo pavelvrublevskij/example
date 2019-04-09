@@ -1,13 +1,13 @@
 package lt.asprogramuoju.example.camel.domain;
 
-import io.swagger.annotations.ApiModel;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
-@ApiModel(description = "Represents an task of the system")
 @Entity
+@Data
 public class Task {
 
     @Id
@@ -21,7 +21,7 @@ public class Task {
     @Column(nullable = false, columnDefinition = "varchar default 'Low'")
     private String priority;
 
-    @ManyToMany(mappedBy = "hasTask")
-    private List<Person> persons;
+//    @ManyToMany(mappedBy = "hasTask")
+//    private List<Person> persons;
 
 }

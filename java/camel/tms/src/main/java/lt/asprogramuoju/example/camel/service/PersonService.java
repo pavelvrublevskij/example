@@ -3,10 +3,15 @@ package lt.asprogramuoju.example.camel.service;
 import lt.asprogramuoju.example.camel.domain.Person;
 import lt.asprogramuoju.example.camel.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+import java.util.Map;
+import java.util.TreeMap;
+
+@Service("personService")
 public class PersonService {
+
+    private final Map<Integer, Person> persons = new TreeMap<>();
 
     @Autowired
     private PersonRepository personRepository;
@@ -15,5 +20,8 @@ public class PersonService {
         return personRepository.findAll();
     }
 
+    public Person findUser(Integer id) {
+        return persons.get(id);
+    }
 
 }
