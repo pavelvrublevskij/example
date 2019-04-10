@@ -1,0 +1,27 @@
+description = 'The liquibase project'
+version '1.0'
+
+buildscript {
+    dependencies {
+        //A Gradle plugin for running the Liquibase database upgrade tool.
+        classpath 'org.liquibase:liquibase-gradle-plugin:1.2.4'
+        //A Gradle plugin for running the PostgreSQL
+        classpath group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
+    }
+}
+
+apply plugin: 'org.liquibase.gradle'
+
+liquibase {
+    activities {
+        main {
+            println "Connect to: $project.dbLiquibaseServer:$project.dbLiquibasePort/$project.dbLiquibaseDatabase"
+
+            changeLogFile "$projectDir/src/main/resources/$fileName"
+            url "jdbc:postgresql://$project.dbLiquibaseServer:$project.dbLiquibasePort/$project.dbLiquibaseDatabase"
+            username "$project.dbLiquibaseLogin"
+            password "$project.dbLiquibasePassword"
+        }
+    }
+    runList = 'main'
+}

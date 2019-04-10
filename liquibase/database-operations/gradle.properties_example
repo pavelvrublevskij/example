@@ -1,0 +1,6 @@
+#Without quotes
+dbLiquibaseDatabase=
+dbLiquibasePort=
+dbLiquibaseServer=
+dbLiquibaseLogin=
+dbLiquibasePassword=

@@ -1,0 +1,11 @@
+description = 'The DB operations project. Project contains db subprojects'
+group 'lt.asprogramuoju'
+
+allprojects {
+    buildscript {
+        repositories {
+            mavenLocal()
+            mavenCentral()
+        }
+    }
+}

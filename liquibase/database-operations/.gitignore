@@ -1,0 +1,25 @@
+Thumbs.db
+.DS_Store
+#Intellij
+.idea/
+*.iml
+*.iws
+*.ipr
+.slcache/
+* - Copy/
+
+target/
+build/
+target-eclipse/
+.settings/
+.classpath
+.project
+*~
+*.swp
+
+.asscache
+.gradle/
+out/
+classes/
+gradle.properties
+*.orig
