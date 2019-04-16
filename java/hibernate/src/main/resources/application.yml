@@ -1,0 +1,30 @@
+server:
+  port: 8086
+
+spring:
+  main:
+    banner-mode: "off"
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2
+#  datasource:
+#    platform: h2
+#    driverClassName: org.h2.Driver
+#    url: jdbc:h2:mem:hiber;MODE=PostgreSQL;DB_CLOSE_ON_EXIT=FALSE
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: ${session-hiber.dbUser}
+    password: ${session-hiber.dbPassword}
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      # use updated for production!!
+      ddl-auto: create-drop
+
+logging:
+  level:
+    org:
+      springframework: ERROR
