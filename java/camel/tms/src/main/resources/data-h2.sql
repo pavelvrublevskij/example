@@ -1,12 +1,13 @@
-INSERT INTO person
+INSERT INTO person(first_name, last_name, updated_at, created_at)
   VALUES
-      (-3, 'Admin',  'Admin'),
-      (-2, 'Vardas', 'Pavardenis'),
-      (-1, 'Giedrius', 'Pavardenis');
+      ('Admin',  'Admin', now(), now()),
+      ('Vardas', 'Pavardenis', now(), now()),
+      ('Giedrius', 'Pavardenis', now(), now());
+      ;
 
-INSERT INTO task(id, title, description, priority)
-  VALUES (0, 'Backlog', 'All new tasks came here.', 'Low');
+INSERT INTO task(title, description, priority, updated_at, created_at)
+  VALUES ('Backlog', 'All new tasks came here.', 'Low', now(), now());
 
--- INSERT INTO person_has_task
---   VALUES (-2, 0),
---          (-1, 0);
+INSERT INTO person_has_task
+   VALUES (1, 1),
+          (2, 1);

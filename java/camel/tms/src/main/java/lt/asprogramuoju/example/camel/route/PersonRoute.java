@@ -29,5 +29,14 @@ public class PersonRoute extends RouteBuilder {
                 .responseMessage().code(200).message("Person successfully returned").endResponseMessage()
                 .to("bean:personService?method=findPerson(${header.id})")
         ;
+
+        rest("/persons/actions").description("Persons REST service with some insert, update, delete actions")
+                .produces(MediaType.APPLICATION_JSON)
+                .consumes(MediaType.APPLICATION_JSON)
+
+                .get().description("Return all Persons after actions").outType(Person[].class)
+                .responseMessage().code(200).message("All Persons successfully returned").endResponseMessage()
+                .to("bean:personService?method=makeAdditionalHibernateDefaultAction")
+                ;
     }
 }

@@ -1,11 +1,14 @@
 server:
   port: 8080
-  context-path: '/camel'
 
 camel:
   springboot:
     # The Camel context name
-    name: ServicesRest
+    name: CamelServlet
+  component:
+    servlet:
+      mapping:
+        contextPath: /api/*
 
 # disable all management enpoints except health
 endpoints:

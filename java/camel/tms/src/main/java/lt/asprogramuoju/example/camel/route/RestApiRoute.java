@@ -2,18 +2,11 @@ package lt.asprogramuoju.example.camel.route;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class RestApiRoute extends RouteBuilder {
-
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-    @Value("{server.context-path}") //"${tms.api.path}")
-    String contextPath;
 
     @Value("${server.port}")
     String serverPort;
@@ -25,7 +18,6 @@ public class RestApiRoute extends RouteBuilder {
                 .component("servlet")
                 .bindingMode(RestBindingMode.json)
 
-                .port(serverPort)
                 .enableCORS(true)
 
                 //Enable swagger endpoint.
@@ -33,7 +25,9 @@ public class RestApiRoute extends RouteBuilder {
                 .apiContextRouteId("api-doc") //id of route providing the swagger endpoint
 
                 //Swagger properties
-                .contextPath(contextPath) //base.path swagger property; use the mapping path set for CamelServlet
+                .contextPath("/api")
+                .port(serverPort)
+                .apiProperty("base.path", "/api")
                 .apiProperty("api.title", "Task Management System (Example) REST API")
                 .apiProperty("api.version", "v1")
                 .apiProperty("cors", "true") // cross-site
