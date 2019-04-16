@@ -5,3 +5,6 @@ This example group keep examples for choosen solutions using Java programming la
 ## Java
 1. [camel](/java/camel/)
 1. [jersey](/java/jersey/)
+
+## Liquibase
+1. [database-operations](/liquibase/database-operations/)

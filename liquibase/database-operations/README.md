@@ -31,7 +31,7 @@ Project Directory Structure
 I recommend to use IntelliJ IDEA 2016.3.X or above for work with gradle project 
 library, or choose for self another tool.
 
-Main project consist one [db](/db/) child project module, but you can have more for your scope
+Main project consist one [db](./db/) child project module, but you can have more for your scope
 
 Project structure
 ---------------------------
