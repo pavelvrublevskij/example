@@ -12,7 +12,7 @@ public class SwaggerAsIndex {
 
         @RequestMapping("/")
         public String redirectToUi() {
-            return "redirect:/webjars/swagger-ui/index.html?url=/api/api-doc&validatorUrl=";
+            return "redirect:/webjars/swagger-ui/index.html?url=/api-doc&validatorUrl=";
         }
     }
 }

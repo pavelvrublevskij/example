@@ -16,16 +16,16 @@ import java.util.Date;
 public class SuperDomain {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // tells Hibernate that the database provides the primary key value
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
 
-    @Column(nullable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
+    @Column(nullable = false, updatable = false, columnDefinition="timestamp default now()")
     @CreatedDate
     private Date createdAt;
 
-    @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
+    @Column(nullable = false, columnDefinition="timestamp default now()")
     @LastModifiedDate
     private Date updatedAt;
 }

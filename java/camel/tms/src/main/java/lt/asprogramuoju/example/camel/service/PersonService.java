@@ -1,5 +1,6 @@
 package lt.asprogramuoju.example.camel.service;
 
+import ch.qos.logback.core.db.dialect.SQLDialect;
 import lt.asprogramuoju.example.camel.domain.Person;
 import lt.asprogramuoju.example.camel.repository.PersonRepository;
 //import org.hibernate.SessionFactory;

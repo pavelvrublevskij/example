@@ -25,9 +25,8 @@ public class RestApiRoute extends RouteBuilder {
                 .apiContextRouteId("api-doc") //id of route providing the swagger endpoint
 
                 //Swagger properties
-                .contextPath("/api")
+                .contextPath("/")
                 .port(serverPort)
-                .apiProperty("base.path", "/api")
                 .apiProperty("api.title", "Task Management System (Example) REST API")
                 .apiProperty("api.version", "v1")
                 .apiProperty("cors", "true") // cross-site

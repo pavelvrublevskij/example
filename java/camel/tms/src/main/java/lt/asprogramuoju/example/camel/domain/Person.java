@@ -19,7 +19,7 @@ public class Person extends SuperDomain {
     @NonNull
     private String lastName;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "person_has_task",
             joinColumns = @JoinColumn(name = "person_id"),
@@ -31,6 +31,11 @@ public class Person extends SuperDomain {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    public void removeTask(Task task) {
+        personHasTask.remove(task);
+        task.getPersons().remove(this);
     }
 
     @Override

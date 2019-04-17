@@ -8,7 +8,7 @@ camel:
   component:
     servlet:
       mapping:
-        contextPath: /api/*
+        contextPath: /*
 
 # disable all management enpoints except health
 endpoints:
@@ -16,10 +16,10 @@ endpoints:
   health:
     enabled: true
 
-# The application configuration properties
-quickstart:
-  generateOrderPeriod: 10s
-  processOrderPeriod: 30s
+## The application configuration properties
+#quickstart:
+#  generateOrderPeriod: 10s
+#  processOrderPeriod: 30s
 
 spring:
   main:
@@ -32,6 +32,12 @@ spring:
     platform: h2
     driverClassName: org.h2.Driver
     url: jdbc:h2:mem:tms;MODE=PostgreSQL
+#  datasource:
+#    platform: postgres
+#    driverClassName: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/postgres
+#    username: ${dbUser}
+#    password: ${dbPassword}
 
   # Spring Data JPA configuration
   jpa:

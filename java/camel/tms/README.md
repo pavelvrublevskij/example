@@ -16,16 +16,16 @@ https://github.com/mplushnikov/lombok-intellij-plugin
 - http://localhost:8080/h2
 
 ### Camel
-- http://localhost:8080/api/api-doc
+- http://localhost:8080/api-doc
 
 ### Swagger
 Swagger document is available at
-- http://localhost:8080/api/api-doc/swagger.json
-- http://localhost:8080/api/api-doc/swagger.yaml
+- http://localhost:8080/api-doc/swagger.json
+- http://localhost:8080/api-doc/swagger.yaml
 
 Swagger UI is at
 Testing with petstore: http://localhost:8080/webjars/swagger-ui/index.html
 
 Project swagger documentation:
-- http://localhost:8080/webjars/swagger-ui/index.html?url=/api/api-doc&validatorUrl=
+- http://localhost:8080/webjars/swagger-ui/index.html?url=/api-doc&validatorUrl=
 - http://localhost:8080/ (redirect)
