@@ -1,11 +1,8 @@
 package lt.asprogramuoju.sessionhiber.domain;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 import lt.asprogramuoju.sessionhiber.domain.enums.CustomerTypeEnum;
 import org.hibernate.annotations.Immutable;
-
 import javax.persistence.*;
 
 @Entity
@@ -20,7 +17,6 @@ import javax.persistence.*;
         }
 )
 @Data
-@NoArgsConstructor
 public class CustomerType {
 
     @Id
@@ -31,8 +27,9 @@ public class CustomerType {
     private String name;
 
     public CustomerType(CustomerTypeEnum customerTypeName) {
-        super();
         this.id = (long)customerTypeName.getId();
         this.name = customerTypeName.getName();
     }
+
+    public CustomerType(){}
 }
