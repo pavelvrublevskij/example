@@ -21,10 +21,10 @@ public class Inventory {
 
     public void updateQuality() {
         for (Item item : items) {
-            if (!item.getName().equals(FMPRO_4) && !item.getName().equals(FMTCO4LCV)) {
-                if (!item.getName().equals(FUELLVLSENSOR))
-                    item.setQuality(item.getQuality() - 1);
-            } else if (item.getName().equals(FMPRO_4))
+            if (!item.getName().equals(FMPRO_4) && !item.getName().equals(FMTCO4LCV) && !item.getName().equals(FUELLVLSENSOR))
+                item.setQuality(item.getQuality() - 1);
+
+            if (item.getName().equals(FMPRO_4))
                 item.setQuality(item.getQuality() + 1);
 
             if (!item.getName().equals(FUELLVLSENSOR))
