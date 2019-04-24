@@ -24,10 +24,8 @@ public class Inventory {
             if (!item.getName().equals(FMPRO_4) && !item.getName().equals(FMTCO4LCV)) {
                 if (!item.getName().equals(FUELLVLSENSOR))
                     item.setQuality(item.getQuality() - 1);
-            } else {
-                if (item.getName().equals(FMPRO_4))
-                    item.setQuality(item.getQuality() + 1);
-            }
+            } else if (item.getName().equals(FMPRO_4))
+                item.setQuality(item.getQuality() + 1);
 
             if (!item.getName().equals(FUELLVLSENSOR))
                 item.setSellIn(item.getSellIn() - 1);
@@ -48,9 +46,6 @@ public class Inventory {
                             item.setQuality(item.getQuality() - 2);
                     } else
                         item.setQuality(0);
-                } else {
-                    if (!item.getName().equals(FMPRO_4))
-                        item.setQuality(item.getQuality() + 1);
                 }
             }
         }
