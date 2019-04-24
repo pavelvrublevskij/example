@@ -68,6 +68,11 @@ public class InventoryTest {
         app.updateQuality();
         app.updateQuality();
         assertEquals(4, app.items[1].getQuality());
+        app.updateQuality();
+        app.updateQuality();
+        assertEquals(-1, app.items[1].getSellIn());
+        assertEquals(6, app.items[1].getQuality());
+
     }
 
     @Test

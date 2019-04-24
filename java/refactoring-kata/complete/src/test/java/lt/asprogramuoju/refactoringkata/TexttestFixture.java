@@ -19,7 +19,7 @@ public class TexttestFixture {
 
         Inventory app = new Inventory(items);
 
-        int days = 2;
+        int days = 8;
         if (args.length > 0) {
             days = Integer.parseInt(args[0]) + 1;
         }
