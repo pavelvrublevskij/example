@@ -1,13 +1,25 @@
-target
-*.iml
-*.ipr
-*.iws
-.idea
+Thumbs.db
 .DS_Store
+#Intellij
+.idea/
+*.iml
+*.iws
+*.ipr
+.slcache/
+* - Copy/
+
+target/
+build/
+target-eclipse/
+.settings/
 .classpath
 .project
-.settings
-.checkstyle
-*.log
+*~
+*.swp
 
-
+.asscache
+.gradle/
+out/
+classes/
+gradle.properties
+*.orig

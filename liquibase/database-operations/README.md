@@ -1,12 +1,12 @@
 The Data Operations with rollback possibility
 ============================
-Read carefully all links before start to analyze or coding. Project is fully documented.
+If you novice with liquibase read carefully all links before start to analyze or coding. Project is fully documented.
 
 REQUIREMENTS
 ---------------------------
-Project need all this stuff. Find, download, configure for your OS:
+Project need all this stuff (if you haven't). Find, download, configure for your OS:
 * [Gradle](https://gradle.org/)->[Documentation](https://docs.gradle.org/current/userguide/userguide.html)
-* [Liquibase](https://www.liquibase.org/)->[How used in project](db/README.md)
+* [Liquibase (optional for maven/gradle projects)](https://www.liquibase.org/)->[How used in project](db/README.md)
 * [JAVA SE (JDK and JRE) from oracle](https://www.oracle.com)
 
 Environment variables
@@ -20,7 +20,6 @@ Running and testing your installation
 ---------------------------
 * To test java run - java -v
 * To test gradle run - gradle -v
-* To test liquibase run - liquibase --version
 
 Gradle plugin searcher
 ---------------------------
