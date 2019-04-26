@@ -6,7 +6,7 @@ REQUIREMENTS
 ---------------------------
 Project need all this stuff (if you haven't). Find, download, configure for your OS:
 * [Gradle](https://gradle.org/)->[Documentation](https://docs.gradle.org/current/userguide/userguide.html)
-* [Liquibase (optional for maven/gradle projects)](https://www.liquibase.org/)->[How used in project](db/README.md)
+* [Liquibase](https://www.liquibase.org/)->[How used in project](db/README.md)
 * [JAVA SE (JDK and JRE) from oracle](https://www.oracle.com)
 
 Environment variables
