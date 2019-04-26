@@ -1,9 +1,12 @@
+Thumbs.db
+.DS_Store
 #Intellij
 .idea/
 *.iml
 *.iws
 *.ipr
 .slcache/
+* - Copy/
 
 target/
 build/
@@ -16,9 +19,11 @@ target-eclipse/
 
 .asscache
 .gradle/
+gradle/
 out/
 classes/
-
+gradle.properties
 *.orig
-
-desktop.ini
+.mvn
+gradlew
+gradlew.bat
