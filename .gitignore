@@ -19,7 +19,11 @@ target-eclipse/
 
 .asscache
 .gradle/
+gradle/
 out/
 classes/
 gradle.properties
 *.orig
+.mvn
+gradlew
+gradlew.bat
