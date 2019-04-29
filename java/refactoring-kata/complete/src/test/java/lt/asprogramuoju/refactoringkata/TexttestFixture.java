@@ -1,6 +1,7 @@
 package lt.asprogramuoju.refactoringkata;
 
 import lt.asprogramuoju.refactoringkata.domain.Item;
+import lt.asprogramuoju.refactoringkata.service.InventoryService;
 
 public class TexttestFixture {
     public static void main(String[] args) {
@@ -17,7 +18,8 @@ public class TexttestFixture {
                 new Item("FM-Tco4 LCV", 5, 49),
                 new Item("FM-Tco4 LCV", 5, 19)};
 
-        Inventory app = new Inventory(items);
+        InventoryService app = new InventoryService();
+        app.setItems(items);
 
         int days = 8;
         if (args.length > 0) {

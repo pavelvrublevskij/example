@@ -1,6 +1,5 @@
 package lt.asprogramuoju.refactoringkata.service;
 
-import lt.asprogramuoju.refactoringkata.controller.ItemController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +20,15 @@ public class ScheduledTasks {
     private int dayCount;
 
     @Autowired
-    ItemController controller;
+    InventoryService inventoryService;
 
-    @Scheduled(fixedRate = 5000)  // every 5 seconds
+    @Scheduled(fixedRate = 10000)  // every 10 seconds
     public void makeDayPast() {
-        controller.updateAllItemQuality();
+        this.jobUpdateQuality();
         log.info("The date is now {}", localDate.plusDays(++dayCount));
+    }
+
+    private void jobUpdateQuality() {
+        inventoryService.updateQuality();
     }
 }
