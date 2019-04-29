@@ -23,7 +23,7 @@ public class ItemController {
 
     @GetMapping("/updateInventory")
     public void updateAllItemQuality() {
-        inventoryService.updateQuality();
+        inventoryService.update();
     }
 
     @GetMapping("/")

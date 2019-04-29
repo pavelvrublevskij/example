@@ -29,6 +29,6 @@ public class ScheduledTasks {
     }
 
     private void jobUpdateQuality() {
-        inventoryService.updateQuality();
+        inventoryService.update();
     }
 }
