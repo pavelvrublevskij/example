@@ -3,7 +3,6 @@ package lt.asprogramuoju.refactoringkata;
 import lt.asprogramuoju.refactoringkata.domain.Item;
 import lt.asprogramuoju.refactoringkata.service.InventoryService;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.Arrays;
