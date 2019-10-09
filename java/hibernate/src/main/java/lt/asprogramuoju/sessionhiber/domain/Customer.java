@@ -1,9 +1,7 @@
 package lt.asprogramuoju.sessionhiber.domain;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lt.asprogramuoju.sessionhiber.domain.enums.CustomerTypeEnum;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.Formula;
 import org.hibernate.annotations.OnDelete;
@@ -12,8 +10,18 @@ import org.hibernate.annotations.OnDeleteAction;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
-import java.util.Date;
 
+/**
+ * Customer domain
+ * <p>
+ *     <b>This class shown PlantUML</b>
+ * </p>
+ *
+ * @author pvrublevskij
+ *
+ * @plantuml.domainModuleName Customer Domain Module UML
+ * @note This is note
+ */
 @Entity(name = "Customer")
 @Table(name = "customer",
         uniqueConstraints = @UniqueConstraint(
@@ -41,11 +49,14 @@ public class Customer extends SuperDomain {
     @Column(length = 50)
     private String surname;
 
+    /**
+     * @plantuml.skip
+     */
     @Column(nullable = false)
     private LocalDate birthDate;
 
     @Formula(value = "date_part('year', age(birthDate))")
-    private int age;
+    protected int age;
 
     @Column(nullable = false, length = 8)
     private String mobileNumber;
@@ -66,5 +77,9 @@ public class Customer extends SuperDomain {
         this.birthDate = birthDate;
         this.mobileNumber = mobileNumber;
         this.customerType = customerType;
+    }
+
+    private void testMethod() {
+        return;
     }
 }

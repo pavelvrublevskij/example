@@ -10,6 +10,10 @@ repositories {
     }
 }
 
+configurations {
+    umlDoclet
+}
+
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web:2.1.4.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-data-jpa:2.1.4.RELEASE'
@@ -17,6 +21,32 @@ dependencies {
     compile 'org.projectlombok:lombok:1.18.6'
     runtime 'com.h2database:h2:1.4.199'
     testCompile 'org.springframework.boot:spring-boot-starter-test:2.1.4.RELEASE'
+
+    umlDoclet 'nl.talsmasoftware:umldoclet:1.1.4' //support jdk 1.8
+}
+
+javadoc {
+    source = sourceSets.main.allJava
+    version = true
+    options.author = true
+    options.showAll()
+    options.windowTitle = 'Domain Specification'
+    options.docTitle = 'Domain Specification'
+    options.bottom = 'Copyright 2019. All rights reserved.'
+    options.group('Domain Packages', ['*.domain.*'])
+    options.docletpath = configurations.umlDoclet.files.asType(List)
+    options.doclet('nl.talsmasoftware.umldoclet.UMLDoclet')
+    options.tags = [
+            'plantuml.domainModuleName:t:PlantUml domain:',
+            'plantuml.skip:tcmf',
+            'note:t'
+    ]
+    options.addStringOption('umlIncludeConstructors', 'true')
+    options.addStringOption('umlIncludePublicFields', 'true')
+    options.addStringOption('umlIncludePrivateFields', 'true')
+    options.addStringOption('umlIncludeProtectedFields', 'true')
+
+    failOnError false
 }
 
 group = 'lt.asprogramuoju'

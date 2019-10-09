@@ -7,6 +7,9 @@ import org.hibernate.annotations.Synchronize;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+/**
+ * @author pvrublevskij
+ */
 @Entity
 @Subselect(
         "SELECT " +

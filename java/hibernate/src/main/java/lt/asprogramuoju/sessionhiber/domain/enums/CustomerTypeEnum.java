@@ -1,5 +1,10 @@
 package lt.asprogramuoju.sessionhiber.domain.enums;
 
+/**
+ * @author pvrublevskij
+ *
+ * @plantuml.skip
+ */
 public enum CustomerTypeEnum {
     SIMPLE(1, "SIMPLE"),
     LOYAL(2, "LOYAL");

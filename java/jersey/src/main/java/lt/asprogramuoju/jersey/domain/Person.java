@@ -4,6 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * Simple Person domain class to understand how hibernate works
+ *
+ * @author Pavel Vrublevskij
+ */
 @Entity
 public class Person {
 

@@ -5,6 +5,10 @@ import lt.asprogramuoju.sessionhiber.domain.enums.CustomerTypeEnum;
 import org.hibernate.annotations.Immutable;
 import javax.persistence.*;
 
+/**
+ * @plantuml.skip
+ * @note this should be skipped
+ */
 @Entity
 @Immutable  // ignore for all write operations
 @Table(
