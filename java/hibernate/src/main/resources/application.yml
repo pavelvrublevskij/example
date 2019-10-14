@@ -24,7 +24,12 @@ spring:
       # use updated for production!!
       ddl-auto: create-drop
 
+## Logging
 logging:
   level:
     org:
       springframework: ERROR
+      # if you wan't to see parameters
+      hibernate:
+        type: trace
+        stat: off
