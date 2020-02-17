@@ -1,8 +1,6 @@
 package lt.asprogramuoju.impl;
 
-import com.company.bean.*;
-import lt.asprogramuoju.bean.*;
-
+import lt.asprogramuoju.bean.Person;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
