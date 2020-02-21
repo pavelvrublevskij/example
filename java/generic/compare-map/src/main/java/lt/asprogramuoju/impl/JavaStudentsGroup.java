@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class JavaStudentsGroup extends PersonGroup<Group, List<Student>> {
+public class JavaStudentsGroup extends PersonGroupImpl<Group, List<Student>> {
 
     /**
      * Set only one Student object to group

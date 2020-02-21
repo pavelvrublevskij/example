@@ -28,14 +28,15 @@ public class Main {
         students1.add(new Student(1, "Vardas", "Pavardenis", 56L));
         students1.add(new Student(2, "Vardas5", "Pavardenis5", 1L));
         students1.add(new Student(3, "Vardas3", "Pavardenis3", 34L));
-        studentGroup.setToGroup(
-                latteGroup , new Student(1, "Jonas", "Jonatis", 34L), false);
 
         students2.add(new Student(1, "Petras", "Petraitis", 34L));
         students2.add(new Student(2, "Alma", "Almanė", 1L));
         students2.add(new Student(3, "Vardas3", "Pavardenis2", 24L));
+
         studentGroup.setToGroup(
                 latteGroup, new Student(2, "Vardas3", "Pavardenis4", 2L), true);
+        studentGroup.setToGroup(
+                latteGroup , new Student(1, "Jonas", "Jonatis", 34L), true);
 
         studentGroup.fillData(cappuccinoGroup, students1);  // do not sort this group
         studentGroup.fillDataAndSort(teaGroup, students2);  // sort this group using PersonGroup lambda expression

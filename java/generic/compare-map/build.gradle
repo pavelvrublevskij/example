@@ -2,10 +2,18 @@ plugins {
     id 'java'
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+repositories {
+    mavenLocal()
+    maven {
+        url = 'http://repo.maven.apache.org/maven2'
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.4.2'
 }
 
 group = 'lt.asprogramuoju'
-version = '0.0.1'
+version = '1.0'
+description = 'Generic (Compare + Map) example'
+sourceCompatibility = '1.8'
