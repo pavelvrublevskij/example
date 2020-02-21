@@ -1,4 +1,4 @@
-package lt.asprogramuoju.impl;
+package lt.asprogramuoju.service;
 
 import lt.asprogramuoju.bean.*;
 import org.junit.jupiter.api.*;

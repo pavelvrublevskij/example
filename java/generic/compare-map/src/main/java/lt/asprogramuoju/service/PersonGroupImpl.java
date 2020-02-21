@@ -1,6 +1,8 @@
-package lt.asprogramuoju.impl;
+package lt.asprogramuoju.service;
 
 import lt.asprogramuoju.bean.Person;
+import lt.asprogramuoju.repository.*;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;

@@ -3,7 +3,7 @@ package lt.asprogramuoju;
 import lt.asprogramuoju.bean.Group;
 import lt.asprogramuoju.bean.Person;
 import lt.asprogramuoju.bean.Student;
-import lt.asprogramuoju.impl.JavaStudentsGroup;
+import lt.asprogramuoju.service.JavaStudentsGroup;
 
 import java.util.ArrayList;
 import java.util.Collections;

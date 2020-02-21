@@ -1,6 +1,4 @@
-package lt.asprogramuoju.impl;
-
-import lt.asprogramuoju.bean.Person;
+package lt.asprogramuoju.repository;
 
 import java.util.Comparator;
 import java.util.Map;

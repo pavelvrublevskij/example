@@ -1,4 +1,4 @@
-package lt.asprogramuoju.impl;
+package lt.asprogramuoju.service;
 
 import lt.asprogramuoju.bean.Group;
 import lt.asprogramuoju.bean.Person;
